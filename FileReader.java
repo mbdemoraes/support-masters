@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class FileReader {
 
 	static String algoritmo = "NB";
-	static String diretorio = "/home/athos/Documentos/github/support-masters/raw_data/" + algoritmo + "/";
+	static String diretorio = "/home/athos/Documentos/raw_data/" + algoritmo + "/";
 	static String nomeArquivo = "incremental_drift";
 
 	/*
