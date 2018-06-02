@@ -1,0 +1,11 @@
+//GRADUAL
+WriteStreamToARFFFile -s (ConceptDriftRealStream -s (generators.SEAGenerator -f 3) -d (generators.SEAGenerator -f 2) -p 50000 -w 20000) -f gradual_drift.arff -m 100000
+
+//SUDDEN
+WriteStreamToARFFFile -s (ConceptDriftRealStream -s (generators.SEAGenerator -f 3) -d (generators.SEAGenerator -f 2) -p 50000 -w 1) -f sudden_drift.arff -m 100000
+
+//INCREMENTAL
+WriteStreamToARFFFile -s (generators.HyperplaneGenerator -a 1000 -k 1000 -t 0.01) -f incremental_drift.arff -m 100000
+
+//RECURRENT
+WriteStreamToARFFFile -s (ConceptDriftRealStream -s (generators.SEAGenerator -f 1) -d (ConceptDriftRealStream -s (generators.SEAGenerator -f 2) -d (ConceptDriftRealStream -s (generators.SEAGenerator -f 3) -d (generators.SEAGenerator -f 2) -p 30000 -w 1) -p 30000 -w 1) -p 20000 -w 1) -f recurrent_drift.arff -m 100000
