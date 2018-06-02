@@ -9,9 +9,9 @@ import java.util.Scanner;
 
 public class FileReader {
 
-	static String algoritmo = "NB";
-	static String diretorio = "/home/athos/Documentos/raw_data/" + algoritmo + "/";
-	static String nomeArquivo = "incremental_drift";
+	static String algoritmo = "MK_4";
+	static String diretorio = "/home/athos/Documentos/github/support-masters/raw_data/" + algoritmo + "/";
+	static String nomeArquivo = "sudden_drift";
 
 	/*
 	 * Metodo que converte uma lista de strings para uma lista de floats
