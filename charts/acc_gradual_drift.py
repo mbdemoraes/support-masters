@@ -16,6 +16,10 @@ plt.plot([10000,20000,30000,40000,50000,60000,70000,80000,90000,100000], [80.71,
 #plt.legend(['NB', 'y = 2x', 'y = 3x', 'y = 4x'], loc='upper left')
 plt.legend(['NaiveBayes', 'MK-4', 'OFS-4'], loc='‘lower right', fontsize='small')
 
+plt.axvline(x=40000, ymax=1, color='#00b0e7', ls='--')
+plt.axvline(x=60000, ymax=1, color='#00b0e7', ls='--')
+plt.axvline(x=50000, ymax=1, color='#00b0e7', label='drift')
+
 plt.xlabel('Tuplas processadas', fontsize=12)
 plt.ylabel('Acurácia (%)', fontsize=12)
 
