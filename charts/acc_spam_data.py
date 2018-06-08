@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+
+
 #x = np.arange(10)
 x = np.arange(500)
 
@@ -21,6 +23,7 @@ plt.legend(['NaiveBayes', 'MK-4', 'MK-10', 'MK-100',  'OFS-4','OFS-10', 'OFS-100
 
 plt.xlabel('Tuplas processadas', fontsize=12)
 plt.ylabel('Acurácia (%)', fontsize=12)
+
 
 #plt.show()
 plt.savefig('saved_charts/acc_spam_data.png')
