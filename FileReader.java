@@ -9,9 +9,9 @@ import java.util.Scanner;
 
 public class FileReader {
 
-	static String algoritmo = "WIN_10";
+	static String algoritmo = "WIN_100";
 	static String diretorio = "/home/athos/Documentos/github/support-masters/raw_data/" + algoritmo + "/";
-	static String nomeArquivo = "ofs_4_spam_data";
+	static String nomeArquivo = "mk_100_mailing_list";
 
 	/*
 	 * Metodo que converte uma lista de strings para uma lista de floats
