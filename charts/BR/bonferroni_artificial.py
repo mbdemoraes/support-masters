@@ -1,26 +1,26 @@
 import matplotlib.pyplot as plt
 import numpy as np
+
 from matplotlib.lines import Line2D
 from matplotlib.patches import Patch
 
+import locale
 
-x = [1, 2, 3, 4, 5, 6, 7]
-x_labels = [1.2, 2.2, 3.2, 4.2, 5.2, 6.2, 7.2]
-y = [1.875, 2.5, 3.625, 3.875, 4.875,5.0,6.25]
-n = [1.875, 2.5, 3.625, 3.875, 4.875,5.0,6.25]
-labels = ['MK-100', 'MK-10', 'MK-4', 'NaiveBayes', 'OFS-10', 'OFS-100', 'OFS-4']
 
+locale.setlocale(locale.LC_ALL, "")
+
+x = [0,3,6]
+x_labels = [0.2,3.2,6.2]
+y = [1.437,2.0,2.56]
+n = [locale.format("%.3f", 1.437),locale.format("%.1f", 2.0),locale.format("%.2f", 2.56)]
+labels = ['NaiveBayes', 'OFS', 'MK']
 
 # You can specify a rotation for the tick labels in degrees or with keywords.
 plt.xticks(x, labels, rotation=30)
 
-plt.axvline(x=1, linewidth='2', color='r', ymin=0.0, ymax=0.45)
-plt.axvline(x=2, linewidth='2', color='r', ymin=0.0, ymax=0.51)
-plt.axvline(x=3, linewidth='2', color='r', ymin=0.09, ymax=0.62)
-plt.axvline(x=4, linewidth='2', color='r', ymin=0.12, ymax=0.65)
-plt.axvline(x=5, linewidth='2', color='r', ymin=0.22, ymax=0.75)
-plt.axvline(x=6, linewidth='2', color='r', ymin=0.23, ymax=0.76)
-plt.axvline(x=7, linewidth='2', color='r', ymin=0.36, ymax=0.88)
+plt.axvline(x=0, linewidth='2', color='r', ymin=0.0, ymax=0.37)
+plt.axvline(x=3, linewidth='2', color='r', ymin=0.0, ymax=0.43)
+plt.axvline(x=6, linewidth='2', color='r', ymin=0.0, ymax=0.49)
 plt.plot(x, y, 'ko')
 
 legend_elements = [Line2D([0], [0], marker='o', color='k', label='Ranking Médio',
@@ -52,4 +52,4 @@ for i, txt in enumerate(n):
 plt.tight_layout()
 
 #plt.show()
-plt.savefig('saved_charts/bonferroni_real.png')
+plt.savefig('saved_charts/bonferroni_artificial.png')

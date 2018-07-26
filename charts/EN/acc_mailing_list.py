@@ -17,18 +17,18 @@ plt.plot([1000,2000,3000,4000,5000,5995], [55.75,54.43,55.39,55.84,56.49,56.92],
 
 
 #plt.legend(['NB', 'y = 2x', 'y = 3x', 'y = 4x'], loc='upper left')
-plt.legend(['NaiveBayes', 'MK-4', 'MK-10', 'MK-100',  'OFS-4','OFS-10', 'OFS-100'], loc='lower left', bbox_to_anchor= (0.0, 1.01), ncol=4, 
+plt.legend(['NaiveBayes', 'IG-4', 'IG-10', 'IG-100',  'OFS-4','OFS-10', 'OFS-100'], loc='lower left', bbox_to_anchor= (0.0, 1.01), ncol=4, 
             borderaxespad=0, frameon=False)
 
-plt.xlabel('Tuplas processadas', fontsize=12)
-plt.ylabel('Acurácia (em %)', fontsize=12)
+plt.xlabel('Processed tuples', fontsize=12)
+plt.ylabel('Accuracy (%)', fontsize=12)
 
 
-plt.grid(color='k', linestyle='-.', linewidth=0.4)
+#plt.grid(color='k', linestyle='-.', linewidth=0.4)
 plt.xticks(np.arange(1000, 7000, step=1000))
 plt.yticks(np.arange(50, 100, step=5))
 plt.xticks(rotation=30)
 
 plt.tight_layout()
 #plt.show()
-plt.savefig('saved_charts/acc_mailing_list.png')
+plt.savefig('acc_mailing_list.png')

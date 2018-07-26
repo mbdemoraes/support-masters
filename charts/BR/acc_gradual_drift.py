@@ -23,7 +23,7 @@ plt.axvline(x=50000, ymax=1, color='#e52845', label='drift')
 plt.xlabel('Tuplas processadas', fontsize=12)
 plt.ylabel('Acurácia (%)', fontsize=12)
 
-plt.grid(color='k', linestyle='-.', linewidth=0.4)
+#plt.grid(color='k', linestyle='-.', linewidth=0.4)
 plt.xticks(np.arange(10000, 110000, step=10000))
 plt.yticks(np.arange(50, 100, step=5))
 plt.xticks(rotation=30)

@@ -19,16 +19,16 @@ plt.plot([1000,2000,3000,4000,5000,6000,7000,8000,9000,9324], [94.26,74.77,68.41
 
 
 #plt.legend(['NB', 'y = 2x', 'y = 3x', 'y = 4x'], loc='upper left')
-plt.legend(['NaiveBayes', 'MK-4', 'MK-10', 'MK-100',  'OFS-4','OFS-10', 'OFS-100'], loc='‘lower right', fontsize='small', shadow=True, fancybox=True)
+plt.legend(['NaiveBayes', 'IG-4', 'IG-10', 'IG-100',  'OFS-4','OFS-10', 'OFS-100'], loc='‘lower right', fontsize='small', shadow=True, fancybox=True)
 
-plt.xlabel('Tuplas processadas', fontsize=12)
-plt.ylabel('Acurácia (%)', fontsize=12)
+plt.xlabel('Processed tuples', fontsize=12)
+plt.ylabel('Accuracy (%)', fontsize=12)
 
-plt.grid(color='k', linestyle='-.', linewidth=0.4)
+#plt.grid(color='k', linestyle='-.', linewidth=0.4)
 plt.xticks(np.arange(1000, 11000, step=1000))
 plt.yticks(np.arange(50, 100, step=5))
 plt.xticks(rotation=30)
 
 plt.tight_layout()
 #plt.show()
-plt.savefig('saved_charts/acc_spam_data.png')
+plt.savefig('acc_spam_data.png')

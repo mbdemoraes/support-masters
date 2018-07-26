@@ -1,0 +1,24 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+#x = np.arange(10)
+x = np.arange(500)
+
+#plt.gca().set_color_cycle(['red', 'green', 'blue', 'yellow'])
+plt.gca().set_color_cycle(['blue'])
+
+plt.plot([10000,20000,30000,40000,50000,60000,70000,80000,90000,100000], [0.0000000000697179372583827,0.000000000123247762086284,0.000000000174422188573,0.000000000225619474342921,0.000000000276628126247476,0.000000000327352100192259,	0.000000000376755301601771,0.000000000426047292309503,0.000000000475372418927443,0.000000000524793223173668], marker="o", color='#ee0fc3')
+plt.plot([10000,20000,30000,40000,50000,60000,70000,80000,90000,100000], [0.000000000565266246688449,0.00000000105180651005275,0.00000000153974906116207,	0.000000002,0.00000000252147833362801,0.000000003,0.00000000349680674581582,0.000000004,0.0000000044732730126025,0.000000005],  marker="o", color='#ba2323')
+
+
+
+#plt.legend(['NB', 'y = 2x', 'y = 3x', 'y = 4x'], loc='upper left')
+plt.legend(['NaiveBayes', 'MK-4','OFS-4'], loc='‘lower right', fontsize='small')
+
+
+plt.xlabel('Tuplas processadas', fontsize=12)
+plt.ylabel('Custo do modelo (RAM-Horas)', fontsize=12)
+
+#plt.show()
+plt.tight_layout()
+plt.savefig('saved_charts/ram_incremental_drift.png')

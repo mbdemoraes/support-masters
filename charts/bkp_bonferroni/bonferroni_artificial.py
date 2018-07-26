@@ -1,7 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-
+from matplotlib.lines import Line2D
+from matplotlib.patches import Patch
 
 x = [0,3,6]
 x_labels = [0.2,3.2,6.2]
@@ -9,15 +10,26 @@ y = [1.437,2.0,2.56]
 n = [1.437,2.0,2.56]
 labels = ['NaiveBayes', 'OFS', 'MK']
 
-plt.plot(x, y, 'ko')
 # You can specify a rotation for the tick labels in degrees or with keywords.
 plt.xticks(x, labels, rotation=30)
 
-plt.axvline(x=0, linewidth='2', color='r', ymin=0.0, ymax=0.85)
-plt.axhline(y=3.78, linestyle='--', xmin=0.0, xmax=1.0)
+plt.axvline(x=0, linewidth='2', color='r', ymin=0.0, ymax=0.37)
+plt.axvline(x=3, linewidth='2', color='r', ymin=0.0, ymax=0.43)
+plt.axvline(x=6, linewidth='2', color='r', ymin=0.0, ymax=0.49)
+plt.plot(x, y, 'ko')
+
+legend_elements = [Line2D([0], [0], marker='o', color='k', label='Ranking Médio',
+                          markersize=8, linestyle=''),
+                   Line2D([0], [0], color='r', linewidth='3', label='Diferença Crítica'
+                          )
+                  ]
 
 
-plt.legend(['Ranking Médio', 'Diferença Crítica'], loc='lower left', bbox_to_anchor= (0.0, 1.01), ncol=4, 
+plt.yticks(np.arange(0, 11, step=0.5))
+plt.ylim(0,10)
+
+
+plt.legend(handles=legend_elements, loc='lower left', bbox_to_anchor= (0.0, 1.01), ncol=4, 
             borderaxespad=0, frameon=False)
 
 plt.ylabel('Ranking médio', fontsize=12)

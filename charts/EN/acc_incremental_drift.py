@@ -14,13 +14,13 @@ plt.plot([10000,20000,30000,40000,50000,60000,70000,80000,90000,100000], [76.87,
 
 
 #plt.legend(['NB', 'y = 2x', 'y = 3x', 'y = 4x'], loc='upper left')
-plt.legend(['NaiveBayes', 'MK-4', 'OFS-4'], loc='‘lower right', fontsize='small', shadow=True, fancybox=True)
+plt.legend(['NaiveBayes', 'IG-4', 'OFS-4'], loc='‘lower right', fontsize='small', shadow=True, fancybox=True)
 
 
-plt.xlabel('Tuplas processadas', fontsize=12)
-plt.ylabel('Acurácia (%)', fontsize=12)
+plt.xlabel('Processed tuples', fontsize=12)
+plt.ylabel('Accuracy (%)', fontsize=12)
 
-plt.grid(color='k', linestyle='-.', linewidth=0.4)
+#plt.grid(color='k', linestyle='-.', linewidth=0.4)
 plt.xticks(np.arange(10000, 110000, step=10000))
 plt.yticks(np.arange(50, 100, step=5))
 plt.xticks(rotation=30)
@@ -28,4 +28,4 @@ plt.xticks(rotation=30)
 plt.tight_layout()
 
 #plt.show()
-plt.savefig('saved_charts/acc_incremental_drift.png')
+plt.savefig('acc_incremental_drift.png')
