@@ -13,7 +13,7 @@ plt.plot([10000,20000,30000,40000,50000,60000,70000,80000,90000,100000], [0.0000
 
 
 #plt.legend(['NB', 'y = 2x', 'y = 3x', 'y = 4x'], loc='upper left')
-plt.legend(['NaiveBayes', 'MK-4','OFS-4'], loc='‘lower right', fontsize='small')
+plt.legend(['NaiveBayes', 'OFS-4'], loc='‘lower right', fontsize='small')
 
 
 plt.xlabel('Tuplas processadas', fontsize=12)
@@ -21,4 +21,4 @@ plt.ylabel('Custo do modelo (RAM-Horas)', fontsize=12)
 
 #plt.show()
 plt.tight_layout()
-plt.savefig('saved_charts/ram_incremental_drift.png')
+plt.savefig('ram_incremental_drift.png')
