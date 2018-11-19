@@ -9,3 +9,10 @@ WriteStreamToARFFFile -s (generators.HyperplaneGenerator -a 6 -k 6 -t 0.01) -f i
 
 //RECURRENT
 WriteStreamToARFFFile -s (ConceptDriftRealStream -s (generators.SEAGenerator -f 1) -d (ConceptDriftRealStream -s (generators.SEAGenerator -f 2) -d (ConceptDriftRealStream -s (generators.SEAGenerator -f 3) -d (generators.SEAGenerator -f 2) -p 30000 -w 1) -p 30000 -w 1) -p 20000 -w 1) -f recurrent_drift.arff -m 100000
+
+//Run from command line
+
+java -cp MOA_FeatureSelection.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask \
+  "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 1000 -m 1 -w 1000) \
+  -s (ArffFileStream -f /home/athos/Documentos/datasets/spam_data.arff) \
+  -f 100" > htresult.csv
